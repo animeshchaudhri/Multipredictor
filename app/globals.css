@@ -2,32 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+body {
+  background-color: rgb(18 21 29 / 1);
+  color: hsl(0 0% 98%);
 }
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-hovered: 240 10% 6.9%;
+    --card-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+
+    --primary: 211 61% 48%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: ;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+
+    --error-label: 0 92.2% 64.9%;
+
+    --ring: 240 3.7% 15.9%;
+
+    --difficulty-beginner: 201 96% 32%;
+    --difficulty-easy: 150 100% 25%;
+    --difficulty-medium: 35 92% 33%;
+    --difficulty-hard: 0 72% 51%;
+    --difficulty-extreme: 262 83% 58%;
+
+    --difficulty-beginner-dark: 199 69% 72%;
+    --difficulty-easy-dark: 142 77% 73%;
+    --difficulty-medium-dark: 31 86% 60%;
+    --difficulty-hard-dark: 0 91% 71%;
+    --difficulty-extreme-dark: 269 97% 85%;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply bg-background text-foreground;
   }
 }
