@@ -176,7 +176,7 @@ export function Daskboard() {
           </DropdownMenuContent>
         </DropdownMenu>
       </header>
-      <main className="grid flex-1 grid-cols-1 gap-4 p-4 sm:px-6 sm:py-0 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <main className="grid flex-1 grid-cols-1 mt-10 gap-4 p-4 sm:px-6 sm:py-0 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-sm font-medium">Total Revenue</CardTitle>
